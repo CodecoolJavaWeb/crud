@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Students</title>
+
+</head>
+<body>
+
+<a href="students/add/" >ADD STUDENT</a>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age Name</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for student in students %}
+    <tr>
+        <td>{{ student.getId() }}</td>
+        <td>{{ student.getFirstName() }}</td>
+        <td>{{ student.getLastName() }}</td>
+        <td>{{ student.getAge() }}</td>
+        <td><a href="students/edit/{{student.getId()}}">EDIT</a> <a href="students/delete/{{student.getId()}}">DELETE</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

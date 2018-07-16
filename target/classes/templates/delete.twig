@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Students</title>
+
+</head>
+<body>
+<form method="post">
+    <input type="text" name="firstName" value="{{ student.getFirstName() }}" disabled>
+    <input type="text" name="lastName" value="{{ student.getLastName() }}" disabled>
+    <input type="text" name="age" value="{{ student.getAge() }}" disabled>
+    <input type="submit" value="delete">
+</form>
+
+</body>
+</html>
